@@ -29,6 +29,11 @@ const category = () => {
     //     }
     // })
     //* 2nd method
-    const categoryArr = products.reduce(() => {}, ["all"])
-
+    const categoryArr = products.reduce((acc, item) => {
+        if(!acc.includes(item.category)){
+            acc.push(item.category)
+        }
+        return acc
+    }, ["all"])
+    console.log(categoryArr);
 }
