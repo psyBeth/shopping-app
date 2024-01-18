@@ -24,7 +24,7 @@
         overflow: hidden;
       }
     </style>
-    <title>Shopping</title>
+    <title>Online Shop</title>
   </head>
   <body>
     <nav class="navbar bg-body-tertiary fixed-top">
@@ -46,7 +46,7 @@
           aria-controls="offcanvasScrolling"
           class="btn btn-secondary position-relative"
         >
-          Sepetim
+          Basket
           <span
             id="sepet"
             class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark"
@@ -66,7 +66,7 @@
       aria-labelledby="offcanvasScrollingLabel"
     >
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Sepetim</h5>
+        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Basket</h5>
         <button
           type="button"
           class="btn-close"
@@ -86,17 +86,17 @@
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title">Ürün Adı</h5>
+                <h5 class="card-title">Product Name</h5>
                 <div class="d-flex align-items-center gap-2" role="button">
                   <i
                     class="fa-solid fa-minus border rounded-circle bg-danger text-white p-2"
                   ></i
-                  ><span class="fw-bold">miktar</span
+                  ><span class="fw-bold">sum</span
                   ><i
                     class="fa-solid fa-plus border bg-danger text-white rounded-circle p-2"
                   ></i>
                 </div>
-                <p class="card-text">Total : fiyat x miktar</p>
+                <p class="card-text">Total : price x sum</p>
                 <button class="btn btn-danger">Remove</button>
               </div>
             </div>
@@ -105,7 +105,7 @@
       </div>
       <div class="offcanvas-footer">
         <div class="d-flex justify-content-between align-items-center">
-          <h5>Toplam Tutar</h5>
+          <h5>Total Price</h5>
           <h5>0 $</h5>
         </div>
       </div>
@@ -177,16 +177,16 @@
               alt="..."
             />
             <div class="card-body">
-              <h5 class="card-title line-clamp-1">Ürün Adı</h5>
-              <p class="card-text line-clamp-3">açıklama</p>
+              <h5 class="card-title line-clamp-1">Product Name</h5>
+              <p class="card-text line-clamp-3">Definition</p>
             </div>
             <div
               class="card-footer w-100 fw-bold d-flex justify-content-between gap-3"
             >
-              <span>Price:</span><span>Fiyat $</span>
+              <span>Price:</span><span>Price $</span>
             </div>
             <div class="card-footer w-100 d-flex justify-content-center gap-3">
-              <button class="btn btn-danger">Sepete Ekle</button>
+              <button class="btn btn-danger">Add to basket</button>
               <button
                 class="btn btn-primary"
                 data-bs-toggle="modal"
