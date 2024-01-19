@@ -39,4 +39,11 @@ const category = () => {
     //* 3rd method
     const categoryArr = [...new Set(products.map(item => item.category))]
     console.log(categoryArr);
+
+    categoryArr.forEach((category, i) => {
+        const btn = document.createElement("button")
+        btn.innerText = category.toUpperCase();
+        btn.classList.add("btn", `btn-${btnColors[i]}`)
+        btnDivs.appendChild(btn);
+    })
 }
