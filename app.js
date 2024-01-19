@@ -14,10 +14,6 @@ const btnColors = [
     "dark",
 ];
 
-//API URLS
-// - Tüm ürünler için => https://anthonyfs.pythonanywhere.com/api/products/
-// - Tek bir ürün için = https://anthonyfs.pythonanywhere.com/api/products/{productID}
-
 let products = []
 let baskets = []
 
@@ -33,24 +29,6 @@ getProducts()
 
 const category = () => {
     console.log(products);
-    // const categoryArr = products.map(item => item.category);
-    // console.log(categoryArr);
-    //* 1st method
-    // let categoryArr = ["all"]
-    // products.forEach(item => {
-    //     if(!categoryArr.includes(item.category)){
-    //         categoryArr.push(item.category)
-    //     }
-    // })
-    //* 2nd method
-    // const categoryArr = products.reduce((acc, item) => {
-    //     if(!acc.includes(item.category)){
-    //         acc.push(item.category)
-    //     }
-    //     return acc
-    // }, ["all"])
-    // console.log(categoryArr);
-    //* 3rd method
     const categoryArr = [
         "all",
         ...new Set(products.map((item) => item.category)),
