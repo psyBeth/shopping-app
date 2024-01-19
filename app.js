@@ -131,3 +131,13 @@ function showModal(product){
               `;
     });
 }
+
+btnDivs.addEventListener("click", (e) => {
+    if(e.target.classList.contains("btn")){
+        const selectedCategory = e.target.innerText.toLowerCase();
+        categoryTitle.innerText = selectedCategory.toUpperCase();
+        const value = searchInput.value;
+        const filteredProducts = filtered(selectedCategory.value)
+        displayProducts(filteredProducts)
+    }
+});
