@@ -118,4 +118,16 @@ function addToCart(product){
     console.log(baskets);
 }
 
-// function showModal()
+function showModal(product){
+    fetch(`https://anthonyfs.pythonanywhere.com/api/products/${product.id}`)
+    .then((res) => res.json())
+    .then((res) => {
+        modalBody.innerHTML = `<div class="text-center">
+              <img src="${res.image}" class="p-2" height="250px" alt="...">
+              <h5 class="card-title">${res.title}</h5>
+              <p class="card-text">${res.description}</p>
+              <p class="card-text">Fiyat: ${res.price} $</p>
+              </div>
+              `;
+    });
+}
