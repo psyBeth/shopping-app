@@ -19,6 +19,7 @@ const btnColors = [
 // - Tek bir ürün için = https://anthonyfs.pythonanywhere.com/api/products/{productID}
 
 let products = []
+let baskets = []
 
 const getProducts = async () => {
     const res = await fetch ("https://anthonyfs.pythonanywhere.com/api/products/")
@@ -103,6 +104,18 @@ function displayProducts(arr){
     });
 }
 
-function addToCart()
+function addToCart(product){
+    console.log(product);
+    if(baskets.some((item) => item.title === product.title)) {
+        baskets = baskets.map((item) => {
+            return item.id === product.id
+            ? {...item, quantity: item.quantity + 1}
+            : item;
+        });
+    } else {
+        baskets.push(product);
+    }
+    console.log(baskets);
+}
 
-function showModal()
+// function showModal()
