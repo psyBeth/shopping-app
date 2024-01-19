@@ -141,3 +141,11 @@ btnDivs.addEventListener("click", (e) => {
         displayProducts(filteredProducts)
     }
 });
+
+searchInput.addEventListener("input", (e) => {
+    const value = e.target.value.toLowerCase()
+    const selectedCategory = categoryTitle.innerText.toLowerCase()
+    const filteredProducts = filtered(selectedCategory.value)
+    displayProducts(filteredProducts)
+});
+
