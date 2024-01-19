@@ -18,7 +18,7 @@ const btnColors = [
 // - Tüm ürünler için => https://anthonyfs.pythonanywhere.com/api/products/
 // - Tek bir ürün için = https://anthonyfs.pythonanywhere.com/api/products/{productID}
 
-const products = []
+let products = []
 
 const getProducts = async () => {
     const res = await fetch ("https://anthonyfs.pythonanywhere.com/api/products/")
@@ -50,8 +50,11 @@ const category = () => {
     // }, ["all"])
     // console.log(categoryArr);
     //* 3rd method
-    const categoryArr = [...new Set(products.map(item => item.category))]
-    console.log(categoryArr);
+    const categoryArr = [
+        "all",
+        ...new Set(products.map((item) => item.category)),
+      ];
+      console.log(categoryArr);
 
     categoryArr.forEach((category, i) => {
         const btn = document.createElement("button")
@@ -89,6 +92,7 @@ function displayProducts(arr){
                 </div>
               </div>
             `;
+        productDivs.appendChild(productDiv)
 });
        
 }
