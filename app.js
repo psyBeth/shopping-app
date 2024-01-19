@@ -92,7 +92,17 @@ function displayProducts(arr){
                 </div>
               </div>
             `;
+        productDiv.addEventListener("click", (e) => {
+            if(e.target.classList.contains("btn-danger")){
+                addToCart(item);
+            } else if (e.target.classList.contains("btn-primary")){
+                showModal(item)
+            }
+        })
         productDivs.appendChild(productDiv)
-});
-       
+    });
 }
+
+function addToCart()
+
+function showModal()
