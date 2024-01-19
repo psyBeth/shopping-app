@@ -149,3 +149,14 @@ searchInput.addEventListener("input", (e) => {
     displayProducts(filteredProducts)
 });
 
+function filtered(selectedCategory,value){
+    const newArr = selectedCategory === "all" 
+    ? products
+    : products.filter(
+        (item) => 
+            item.category.toLowerCase() ===
+            selectedCategory &&
+            item.title.toLowerCase().includes(value.toLowerCase())
+        );
+    return newArr
+}
