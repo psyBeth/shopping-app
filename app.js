@@ -29,11 +29,14 @@ const category = () => {
     //     }
     // })
     //* 2nd method
-    const categoryArr = products.reduce((acc, item) => {
-        if(!acc.includes(item.category)){
-            acc.push(item.category)
-        }
-        return acc
-    }, ["all"])
+    // const categoryArr = products.reduce((acc, item) => {
+    //     if(!acc.includes(item.category)){
+    //         acc.push(item.category)
+    //     }
+    //     return acc
+    // }, ["all"])
+    // console.log(categoryArr);
+    //* 3rd method
+    const categoryArr = [...new Set(products.map(item => item.category))]
     console.log(categoryArr);
 }
