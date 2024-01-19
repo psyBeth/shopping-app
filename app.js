@@ -3,6 +3,17 @@ const productDivs = document.getElementById("products")
 const searchInput = document.getElementById("searchInput")
 const categoryTitle = document.getElementById("category")
 
+const btnColors = [
+    "primary",
+    "secondary",
+    "success",
+    "info",
+    "warning",
+    "danger",
+    "light",
+    "dark",
+];
+
 //API URLS
 // - Tüm ürünler için => https://anthonyfs.pythonanywhere.com/api/products/
 // - Tek bir ürün için = https://anthonyfs.pythonanywhere.com/api/products/{productID}
@@ -46,4 +57,4 @@ const category = () => {
         btn.classList.add("btn", `btn-${btnColors[i]}`)
         btnDivs.appendChild(btn);
     })
-}
+};
