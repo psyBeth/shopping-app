@@ -19,7 +19,7 @@ const btnColors = [
 ];
 
 let products = [];
-let baskets = [];
+// let baskets = [];
 
 const getProducts = async () => {
     const res = await fetch ("https://anthonyfs.pythonanywhere.com/api/products/")

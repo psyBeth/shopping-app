@@ -1,7 +1,7 @@
 export const basketModule = ( function() {
     let baskets = [];
 
-    function addToCart(product) {
+    function addToBasket(product) {
         if (baskets.some((item) => item.title === product.title)) {
             baskets = baskets.map((item) => {
               return item.id === product.id
@@ -14,8 +14,14 @@ export const basketModule = ( function() {
         console.log(baskets);
         updateBasketUI();
     }
-});
 
-function updateBasketUI() {
-    
-}
+    function updateBasketUI() {
+
+    }
+
+    return {
+        addToBasket,
+    };
+
+})();
+
