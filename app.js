@@ -1,5 +1,5 @@
 import { basketModule } from "./Basket.js";
-
+//! there is some import issue needed to be figured out
 
 const btnDivs = document.getElementById("btns")
 const productDivs = document.getElementById("products")
