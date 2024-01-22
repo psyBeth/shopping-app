@@ -143,3 +143,15 @@ function filtered(selectedCategory,value){
         );
     return newArr
 }
+
+productDivs.addEventListener("click", (e) => {
+    if (e.target.classList.contains("btn-danger")){
+        const productId = e.target.closest(".col").id;
+        const selectedProduct = products.find((product) => product.id === productId);
+        basketModule.addToBasket(selectedProduct);
+    } else if (e.target.classList.contains("btn-primary")) {
+        const productId = e.target.closest(".col").id;
+        const selectedProduct = products.find((product) => product.id === productId);
+        showModal(selectedProduct);
+    }
+});
