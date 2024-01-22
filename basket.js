@@ -16,7 +16,18 @@ export const basketModule = ( function() {
     }
 
     function updateBasketUI() {
-        //? trying to figure out this part 
+        const basketItemsDiv = document.getElementById('offcanvasScrolling'); 
+        basketItemsDiv.innerHTML = "";
+        baskets.forEach((item) => {
+            const basketItemDiv = document.createElement("div");
+            basketItemDiv.classList.add("basket-item");
+            basketItemDiv.innerHTML = `
+            <p>${item.title} - Quantity: ${item.quantity}</p>
+            `;
+            basketItemsDiv.appendChild(basketItemDiv);
+        });
+        
+        //? total price will be here
     }
 
     return {
