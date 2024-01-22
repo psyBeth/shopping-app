@@ -1,4 +1,4 @@
-import { basketModule } from "./Basket"
+import { basketModule } from "./Basket.js";
 
 
 const btnDivs = document.getElementById("btns")
