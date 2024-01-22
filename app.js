@@ -81,7 +81,7 @@ function displayProducts(arr){
             `;
         productDiv.addEventListener("click", (e) => {
             if(e.target.classList.contains("btn-danger")){
-                addToCart(item);
+                addToBasket(item);
             } else if (e.target.classList.contains("btn-primary")){
                 showModal(item)
             }
@@ -90,20 +90,20 @@ function displayProducts(arr){
     });
 }
 
-//! THIS PART WILL BE EDITED ASAP
-function addToCart(product){
-    console.log(product);
-    if(baskets.some((item) => item.title === product.title)) {
-        baskets = baskets.map((item) => {
-            return item.id === product.id
-            ? {...item, quantity: item.quantity + 1}
-            : item;
-        });
-    } else {
-        baskets.push(product);
-    }
-    console.log(baskets);
-} //! EDIT EDIT EDIT EDIT 
+// //! THIS PART WILL BE EDITED ASAP
+// function addToCart(product){
+//     console.log(product);
+//     if(baskets.some((item) => item.title === product.title)) {
+//         baskets = baskets.map((item) => {
+//             return item.id === product.id
+//             ? {...item, quantity: item.quantity + 1}
+//             : item;
+//         });
+//     } else {
+//         baskets.push(product);
+//     }
+//     console.log(baskets);
+// } //! EDIT EDIT EDIT EDIT 
 
 function showModal(product){
     fetch(`https://anthonyfs.pythonanywhere.com/api/products/${product.id}`)

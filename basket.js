@@ -27,7 +27,9 @@ export const basketModule = ( function() {
             basketItemsDiv.appendChild(basketItemDiv);
         });
         
-        //? total price will be here
+        const totalQuantity = baskets.reduce((total, item) => total + item.quantity, 0);
+        const totalQuantityDiv = document.getElementById('totalQuantity');
+        totalQuantityDiv.innerText = `Total Quantity: ${totalQuantity}`;
     }
 
     return {
