@@ -16,7 +16,7 @@ export const basketModule = ( function() {
     }
 
     function updateBasketUI() {
-
+        //? trying to figure out this part 
     }
 
     return {
