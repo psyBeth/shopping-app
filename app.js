@@ -22,12 +22,16 @@ let products = [];
 let baskets = [];
 
 const getProducts = async () => {
-    const res = await fetch ("https://anthonyfs.pythonanywhere.com/api/products/")
-    const data = await res.json()
-    console.log(data);
-    products = data
-    category();
-    displayProducts(products);
+    try {
+        const res = await fetch ("https://anthonyfs.pythonanywhere.com/api/products/")
+        const data = await res.json()
+        console.log(data);
+        products = data
+        category();
+        displayProducts(products);
+    } catch (error) {
+        console.error("Error fetching products:", error);
+    }
 }
 getProducts()
 
