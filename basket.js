@@ -16,7 +16,7 @@ export const basketModule = ( function() {
     }
 
     function updateBasketUI() {
-        const basketItemsDiv = document.getElementById('offcanvasScrolling'); 
+        const basketItemsDiv = document.getElementById('offcanvas-body'); 
         basketItemsDiv.innerHTML = "";
         baskets.forEach((item) => {
             const basketItemDiv = document.createElement("div");
