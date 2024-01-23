@@ -1,5 +1,4 @@
 import { basketModule } from "./Basket.js";
-//! there is some import issue needed to be figured out
 
 const btnDivs = document.getElementById("btns")
 const productDivs = document.getElementById("products")
@@ -84,7 +83,7 @@ function displayProducts(arr){
                 addToBasket(item);
             } else if (e.target.classList.contains("btn-primary")){
                 showModal(item)
-            }
+            } //! it says undefined (error)
         })
         productDivs.appendChild(productDiv)
     });
